@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="GameOfThrones" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="qvt-4R-w6I">
+                                <rect key="frame" x="0.0" y="28" width="375" height="639"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Boc-9H-3ht"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="BfU-DI-nx1"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="HGM-jy-ybZ">
+                                <rect key="frame" x="0.0" y="677" width="375" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Loading..." textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QnJ-MT-AVU">
+                                        <rect key="frame" x="0.0" y="0.0" width="375" height="40"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" red="0.0" green="0.43529411759999997" blue="0.74901960779999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="QnJ-MT-AVU" firstAttribute="leading" secondItem="HGM-jy-ybZ" secondAttribute="leading" id="76t-VK-wKZ"/>
+                                    <constraint firstAttribute="bottom" secondItem="QnJ-MT-AVU" secondAttribute="bottom" id="Iwn-aw-ibk"/>
+                                    <constraint firstAttribute="height" constant="40" id="KYI-8M-JtR"/>
+                                    <constraint firstAttribute="trailing" secondItem="QnJ-MT-AVU" secondAttribute="trailing" id="e3L-Ai-apF"/>
+                                    <constraint firstItem="QnJ-MT-AVU" firstAttribute="top" secondItem="HGM-jy-ybZ" secondAttribute="top" id="itQ-9S-mRM"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="qvt-4R-w6I" secondAttribute="trailing" id="2pr-Te-tUr"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="HGM-jy-ybZ" secondAttribute="bottom" constant="-50" id="77G-L8-8la"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="qvt-4R-w6I" secondAttribute="bottom" id="Ax2-Hf-e3t"/>
+                            <constraint firstItem="qvt-4R-w6I" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Dxd-iw-Kl8"/>
+                            <constraint firstAttribute="trailing" secondItem="HGM-jy-ybZ" secondAttribute="trailing" id="FiG-aY-8lh"/>
+                            <constraint firstItem="qvt-4R-w6I" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="e40-7j-ouP"/>
+                            <constraint firstItem="HGM-jy-ybZ" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="ftY-pK-bes"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="loadingView" destination="HGM-jy-ybZ" id="Y0O-fv-l1m"/>
+                        <outlet property="tableView" destination="qvt-4R-w6I" id="avZ-hz-jau"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="116" y="122.78860569715144"/>
+        </scene>
+    </scenes>
+</document>
